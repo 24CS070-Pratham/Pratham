@@ -1,0 +1,121 @@
+/* Body Setup */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(120deg, #e0f7fa, #80d0c7);
+  animation: fadeIn 1s ease-in;
+}
+
+/* Main Container */
+center {
+  margin-top: 40px;
+  animation: slideIn 1s ease;
+}
+
+/* University Logo */
+img[src*="logo"] {
+  animation: float 3s ease-in-out infinite;
+  margin-bottom: 20px;
+}
+
+/* Dashboard Heading */
+font[size="6"] {
+  color: #2c3e50;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px #ccc;
+  animation: glowTitle 2s ease-in-out infinite alternate;
+}
+
+/* Section Headers */
+font[size="5"] {
+  color: #004d40;
+  display: block;
+  margin: 30px 0 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  animation: popIn 1s ease;
+}
+
+/* Tables (Glass Effect) */
+table {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(8px);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+  animation: floatTable 1.5s ease;
+}
+
+/* Links in Tables */
+table a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #003366;
+  padding: 10px 20px;
+  background: #ffffffcc;
+  border-radius: 10px;
+  display: inline-block;
+  transition: all 0.3s ease;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+table a:hover {
+  background: #0066cc;
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #0066cc;
+}
+
+/* Student Image */
+img[src*="encrypted"] {
+  border-radius: 20px;
+  margin-top: 30px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  animation: bounceImage 3s ease-in-out infinite;
+}
+
+/* Last Updated Text */
+font[size="2"] {
+  color: #555;
+  font-style: italic;
+  margin-top: 10px;
+  display: block;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes bounceImage {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes glowTitle {
+  from { text-shadow: 0 0 5px #33ccff; }
+  to { text-shadow: 0 0 15px #00bcd4; }
+}
+
+@keyframes floatTable {
+  0% { transform: translateY(40px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}

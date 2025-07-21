@@ -1,0 +1,147 @@
+/* General Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #ece9e6, #ffffff);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.5s;
+}
+
+.login-container {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 350px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.logo {
+  width: 100%;
+  max-width: 320px;
+  margin-bottom: 20px;
+}
+
+.portal-title {
+  font-size: 28px;
+  color: navy;
+  margin-bottom: 10px;
+}
+
+.login-header {
+  font-size: 20px;
+  color: green;
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
+
+form input[type="text"],
+form input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background-color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+}
+
+.login-button {
+  padding: 12px 25px;
+  background-color: navy;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: darkblue;
+}
+
+.footer-text {
+  margin-top: 25px;
+  font-size: 14px;
+  color: gray;
+}
+
+.marquee {
+  margin-top: 20px;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: marquee 15s linear infinite;
+  font-size: 22px;
+  color: #C71585;
+  font-weight: bold;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+#theme-dark {
+  background: linear-gradient(to right, #1e1e1e, #2c3e50);
+}
+
+#theme-dark .login-container {
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+#theme-dark input,
+#theme-dark .login-button {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid #555;
+}
+
+#theme-dark .login-button:hover {
+  background-color: #333;
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
+
+.theme-toggle button {
+  font-size: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.3s;
+}
+
+#theme-dark .theme-toggle button {
+  color: white;
+}
+
+#errorMessage {
+  color: red;
+  margin-top: 10px;
+  font-size: 14px;
+  display: none;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
